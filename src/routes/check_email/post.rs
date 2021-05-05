@@ -23,7 +23,7 @@ use super::{
 use crate::sentry_util;
 use async_recursion::async_recursion;
 use check_if_email_exists::{
-	check_email as ciee_check_email, CheckEmailInput, CheckEmailOutput, Reachable,
+	check_email as ciee_check_email, CheckEmailInput, CheckEmailOutput, Reachable, CheckEmailInputProxy,
 };
 use serde::{Deserialize, Serialize};
 use std::{
