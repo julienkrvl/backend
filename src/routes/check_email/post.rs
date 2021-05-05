@@ -84,7 +84,7 @@ async fn create_check_email_future(
 			env::var("RCH_FROM_EMAIL").unwrap_or_else(|_| "user@example.org".into())
 		}))
 		.hello_name(body.hello_name.unwrap_or_else(|| "gmail.com".into()));
-	input.proxy(body.proxy.unwrap_or_else(|| "".into()));
+	input.proxy(body.proxy.host, body.proxy.port);
 	input.smtp_timeout(Duration::from_secs(SMTP_THRESHOLD));
 
 	// Retry each future twice, to avoid grey-listing.
