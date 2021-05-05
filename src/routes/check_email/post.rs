@@ -42,6 +42,7 @@ pub struct EndpointRequest {
 	from_email: Option<String>,
 	hello_name: Option<String>,
 	to_email: String,
+	proxy: Option<CheckEmailInputProxy>,
 }
 
 /// This option represents how we should execute the SMTP connection to check
