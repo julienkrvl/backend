@@ -42,8 +42,8 @@ pub struct EndpointRequest {
 	from_email: Option<String>,
 	hello_name: Option<String>,
 	to_email: String,
-	proxy_host: Option<String>,
-	proxy_port: Option<u16>,
+	proxy_host: String,
+	proxy_port: u16,
 }
 
 /// This option represents how we should execute the SMTP connection to check
